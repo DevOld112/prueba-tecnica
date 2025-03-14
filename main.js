@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    /* Definiendo las capitales que voy a mostrar*/
     const capitals = [
         {
             cca3: "FRA",
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
     
+    /* Obteniendo los paises que voy a mostrar desde la API */
   
     const getCountrys = async () => {
         const url = 'https://restcountries.com/v3.1/all';
@@ -63,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(filterCountrys);
         return filterCountrys;
     };
+
+    /* Mostrando los paises que voy obteniendo */
 
     const displayCountries = (countries) => {
         const mainContent = document.querySelector('.main-content');
